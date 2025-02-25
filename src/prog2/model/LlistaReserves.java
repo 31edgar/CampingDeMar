@@ -1,5 +1,5 @@
 package prog2.model;
-import prog2.vista.InLlistaReserves;
+import prog2.model.InLlistaReserves;
 
 public class LlistaReserves implements InLlistaReserves {
 }
