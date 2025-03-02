@@ -5,10 +5,14 @@ public class Parcela extends Allotjament {
     float metres;
     boolean connexioElectrica;
 
-    //constructor comú
+    //Constructor comú
     public Parcela(String nom_, String idAllotjament, float metres, boolean connexioElectrica){
+        super(nom_, idAllotjament);
+        this.metres = metres;
+        this.connexioElectrica = connexioElectrica;
     }
 
+    //Mètodes
     public boolean correcteFuncionament(){
         return connexioElectrica;
     }
@@ -28,4 +32,11 @@ public class Parcela extends Allotjament {
     public void setConnexioElectrica(boolean connexioElectrica){
         this.connexioElectrica = connexioElectrica;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Parcela{metres=" + metres + ", connexioElectrica=" + connexioElectrica + "}";
+    }
 }
+
+

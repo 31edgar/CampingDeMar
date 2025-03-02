@@ -12,10 +12,22 @@ public class Glamping extends Allotjament {
     String material;
     boolean casaMascota;
 
+    //Constructor
     public Glamping(String nom_, String idAllotjament_, String mida, int habitacions, int placesPersones, int placesParquing, boolean terrassa, boolean tv, boolean aireFred,
                     String material, boolean casaMascota) {
+        super(nom_, idAllotjament_);
+        this.mida = mida;
+        this.habitacions = habitacions;
+        this.placesPersones = placesPersones;
+        this.placesParquing = placesParquing;
+        this.terrassa = terrassa;
+        this.tv = tv;
+        this.aireFred = aireFred;
+        this.material = material;
+        this.casaMascota = casaMascota;
     }
 
+    //Mètodes
     public boolean correcteFuncionament() {
         return casaMascota;
     }
@@ -33,7 +45,7 @@ public class Glamping extends Allotjament {
     }
 
     public int getPlacesParquing(){
-        return placesPersones;
+        return placesParquing;
     }
 
     public boolean isTerrassa(){
@@ -41,11 +53,11 @@ public class Glamping extends Allotjament {
     }
 
     public boolean isTv(){
-        return terrassa;
+        return tv;
     }
 
     public boolean isAireFred(){
-        return terrassa;
+        return aireFred;
     }
 
     public String getMaterial(){
@@ -56,4 +68,10 @@ public class Glamping extends Allotjament {
         return casaMascota;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "Glamping{mida=" + mida + ", habitacions=" + habitacions +
+                ", placesPersones=" + placesPersones + ", placesParquing=" + placesParquing + ", terrassa=" + terrassa
+                + ", tv=" + tv + ", aireFred=" + aireFred + ", material=" + material + ", casaMascota=" + casaMascota + "}";
+    }
 }

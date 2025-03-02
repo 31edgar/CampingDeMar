@@ -11,9 +11,19 @@ public class Bungalow extends Allotjament {
     boolean aireFred;
 
     //Constructor comú
-    public Bungalow(String nom_, String idAllotjament_, String mida, int habitacions, int placesPersones, int placesParquing, boolean terrassa, boolean tv, boolean aireFred) {
+    public Bungalow(String nom_, String idAllotjament_, String mida, int habitacions, int placesPersones,
+                    int placesParquing, boolean terrassa, boolean tv, boolean aireFred) {
+        super(nom_, idAllotjament_);
+        this.mida = mida;
+        this.habitacions = habitacions;
+        this.placesPersones = placesPersones;
+        this.placesParquing = placesParquing;
+        this.terrassa = terrassa;
+        this.tv = tv;
+        this.aireFred = aireFred;
     }
 
+    //Mètodes
     public boolean correcteFuncionament() {
         return aireFred;
     }
@@ -31,7 +41,7 @@ public class Bungalow extends Allotjament {
     }
 
     public int getPlacesParquing(){
-        return placesPersones;
+        return placesParquing;
     }
 
     public boolean isTerrassa(){
@@ -39,10 +49,16 @@ public class Bungalow extends Allotjament {
     }
 
     public boolean isTv(){
-        return terrassa;
+        return tv;
     }
 
     public boolean isAireFred(){
-        return terrassa;
+        return aireFred;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Bungalow{mida=" + mida + ", habitacions=" + habitacions + ", placesPersones=" +
+                placesPersones + ", placesParquing=" + placesParquing + ", terrassa=" + terrassa + ", tv=" + tv + ", aireFred=" + aireFred + "}";
     }
 }
