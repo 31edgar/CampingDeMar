@@ -2,32 +2,40 @@ package prog2.model;
 
 public class Glamping extends Casa {
     //Atributs Glamping
-    private String material;
-    private boolean casaMascota;
+    private String material_;
+    private boolean casaMascota_;
 
     //Constructor
     public Glamping(String nom_, String idAllotjament_, String mida, int habitacions, int placesPersones,
-                    String material, boolean casaMascota) {
+                    String material_, boolean casaMascota_) {
         super(nom_, idAllotjament_, 5, 3, mida, habitacions, placesPersones);
-        this.material = material;
-        this.casaMascota = casaMascota;
+        this.material_ = material_;
+        this.casaMascota_ = casaMascota_;
     }
 
     //Mètodes
     public boolean correcteFuncionament() {
-        return casaMascota;
+        return casaMascota_;
     }
 
     public String getMaterial(){
-        return material;
+        return material_;
     }
 
     public boolean isCasaMascota(){
-        return casaMascota;
+        return casaMascota_;
+    }
+
+    public void setMaterial(String material_) {
+        this.material_ = material_;
+    }
+
+    public void setCasaMascota(boolean casaMascota_) {
+        this.casaMascota_ = casaMascota_;
     }
 
     @Override
     public String toString() {
-        return super.toString() + "Glamping{material=" + material + ", casaMascota=" + casaMascota + "}";
+        return super.toString() + "Glamping{material=" + material_ + ", casaMascota=" + casaMascota_ + "}";
     }
 }
