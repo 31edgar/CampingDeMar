@@ -1,5 +1,4 @@
 package prog2.model;
-import prog2.model.InCamping;
 import prog2.vista.ExcepcioReserva;
 
 import java.time.LocalDate;
@@ -7,20 +6,20 @@ import java.util.ArrayList;
 
 public class Camping implements InCamping {
     // Atributs
-    String nom;
-    ArrayList<Allotjament> llistaAllotjaments = new ArrayList<>();
-    ArrayList<Client> llistaClients = new ArrayList<>();
-    LlistaReserves llistaReserves = new LlistaReserves(); // CAL IMPLEMENTAR LA CLASSE LlistaReserves
+    private String nom_;
+    private ArrayList<Allotjament> llistaAllotjaments = new ArrayList<>();
+    private ArrayList<Client> llistaClients = new ArrayList<>();
+    private LlistaReserves llistaReserves = new LlistaReserves(); // CAL IMPLEMENTAR LA CLASSE LlistaReserves
 
     // Constructor
-    public Camping(String nom) {
-        this.nom = nom;
+    public Camping(String nom_) {
+        this.nom_ = nom_;
     }
 
     // Mètodes
     // - Getters
     public String getNom() {
-        return nom;
+        return nom_;
     }
 
     public LlistaReserves getLlistaReserves() {
@@ -95,7 +94,7 @@ public class Camping implements InCamping {
     }
 
     public Allotjament getAllotjamentEstadaMesCurta() {
-        //Falta implementar
+        // Falta implementar
     }
 
 

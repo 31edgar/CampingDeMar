@@ -118,7 +118,9 @@ public interface InCamping {
 
 
     /**
-     * Afegeix una nova reserva al càmping. Per fer-ho fa el següent: cerca el soci que vol fer la reserva i el servei que es vol reservar amb la informació necessària rebuda com a paràmetres i invoca al mètode afegirReserva de la classe LlistaReserves que crearà la reserva, si es pot, i la afegirà a la llista de reserves.
+     * Afegeix una nova reserva al càmping. Per fer-ho fa el següent: cerca el soci que vol fer la reserva i el servei
+     * que es vol reservar amb la informació necessària rebuda com a paràmetres i invoca al mètode afegirReserva de la
+     * classe LlistaReserves que crearà la reserva, si es pot, i la afegirà a la llista de reserves.
      * @param id_ l'identificador de l'allotjament.
      * @param dni_ el DNI del client que fa la reserva.
      * @param dataEntrada la data d'entrada.
