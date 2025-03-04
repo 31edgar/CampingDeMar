@@ -26,6 +26,14 @@ public class BungalowPremium extends Bungalow {
         return codiWifi;
     }
 
+    public void setServeisExtra(boolean serveisExtra) {
+        this.serveisExtra = serveisExtra;
+    }
+
+    public void setCodiWifi(String codiWifi) {
+        this.codiWifi = codiWifi;
+    }
+
     //Declara primer un Bungalow i seguidament afageix un llistat "ServeisPreium"
     @Override
     public String toString() {

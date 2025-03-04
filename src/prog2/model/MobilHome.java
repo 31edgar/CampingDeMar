@@ -20,6 +20,10 @@ public class MobilHome extends Casa {
         return terrasaBarbacoa;
     }
 
+    public void setTerrasaBarbacoa(boolean terrasaBarbacoa) {
+        this.terrasaBarbacoa = terrasaBarbacoa;
+    }
+
     @Override
     public String toString() {
         return super.toString() + "MobilHome{terrasaBarbacoa=" + terrasaBarbacoa + "}";

@@ -36,6 +36,22 @@ public class Bungalow extends Casa {
         return aireFred;
     }
 
+    public void setPlacesParquing(int placesParquing) {
+        this.placesParquing = placesParquing;
+    }
+
+    public void setTerrassa(boolean terrassa) {
+        this.terrassa = terrassa;
+    }
+
+    public void setTv(boolean tv) {
+        this.tv = tv;
+    }
+
+    public void setAireFred(boolean aireFred) {
+        this.aireFred = aireFred;
+    }
+
     @Override
     public String toString() {
         return super.toString() + "Bungalow{placesParquing=" + placesParquing + ", terrassa=" + terrassa + ", tv=" + tv + ", aireFred=" + aireFred + "}";

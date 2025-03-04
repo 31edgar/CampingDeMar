@@ -26,6 +26,14 @@ public class Glamping extends Casa {
         return casaMascota;
     }
 
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+
+    public void setCasaMascota(boolean casaMascota) {
+        this.casaMascota = casaMascota;
+    }
+
     @Override
     public String toString() {
         return super.toString() + "Glamping{material=" + material + ", casaMascota=" + casaMascota + "}";
