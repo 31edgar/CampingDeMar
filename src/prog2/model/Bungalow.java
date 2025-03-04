@@ -1,22 +1,16 @@
 package prog2.model;
 
-public class Bungalow extends Allotjament {
+public class Bungalow extends Casa {
     //Atribut Bungalow
-    String mida;
-    int habitacions;
-    int placesPersones;
-    int placesParquing;
-    boolean terrassa;
-    boolean tv;
-    boolean aireFred;
+    private int placesParquing;
+    private boolean terrassa;
+    private boolean tv;
+    private boolean aireFred;
 
     //Constructor comú
     public Bungalow(String nom_, String idAllotjament_, String mida, int habitacions, int placesPersones,
                     int placesParquing, boolean terrassa, boolean tv, boolean aireFred) {
-        super(nom_, idAllotjament_, 7, 4);
-        this.mida = mida;
-        this.habitacions = habitacions;
-        this.placesPersones = placesPersones;
+        super(nom_, idAllotjament_, 7, 4,mida,habitacions,placesPersones);
         this.placesParquing = placesParquing;
         this.terrassa = terrassa;
         this.tv = tv;
@@ -24,21 +18,7 @@ public class Bungalow extends Allotjament {
     }
 
     //Mètodes
-    public boolean correcteFuncionament() {
-        return aireFred;
-    }
-
-    public String getMida(){
-        return mida;
-    }
-
-    public int getHabitacions(){
-        return habitacions;
-    }
-
-    public int getPlacesPersones(){
-        return placesPersones;
-    }
+    public boolean correcteFuncionament() {return aireFred;}
 
     public int getPlacesParquing(){
         return placesParquing;
@@ -58,7 +38,6 @@ public class Bungalow extends Allotjament {
 
     @Override
     public String toString() {
-        return super.toString() + "Bungalow{mida=" + mida + ", habitacions=" + habitacions + ", placesPersones=" +
-                placesPersones + ", placesParquing=" + placesParquing + ", terrassa=" + terrassa + ", tv=" + tv + ", aireFred=" + aireFred + "}";
+        return super.toString() + "Bungalow{placesParquing=" + placesParquing + ", terrassa=" + terrassa + ", tv=" + tv + ", aireFred=" + aireFred + "}";
     }
 }

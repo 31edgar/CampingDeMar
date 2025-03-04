@@ -2,8 +2,8 @@ package prog2.model;
 
 public class Parcela extends Allotjament {
     //Atributs Parcela
-    float metres;
-    boolean connexioElectrica;
+    private float metres;
+    private boolean connexioElectrica;
 
     //Constructor comú
     public Parcela(String nom_, String idAllotjament, float metres, boolean connexioElectrica){
@@ -13,13 +13,9 @@ public class Parcela extends Allotjament {
     }
 
     //Mètodes
-    public boolean correcteFuncionament(){
-        return connexioElectrica;
-    }
+    public boolean correcteFuncionament() {return connexioElectrica;}
 
-    public float getMida() {
-        return metres;
-    }
+    public float getMida() {return metres;}
 
     public void setMida(float metres){
         this.metres = metres;
