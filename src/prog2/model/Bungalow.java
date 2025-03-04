@@ -13,7 +13,7 @@ public class Bungalow extends Allotjament {
     //Constructor comú
     public Bungalow(String nom_, String idAllotjament_, String mida, int habitacions, int placesPersones,
                     int placesParquing, boolean terrassa, boolean tv, boolean aireFred) {
-        super(nom_, idAllotjament_);
+        super(nom_, idAllotjament_, 7, 4);
         this.mida = mida;
         this.habitacions = habitacions;
         this.placesPersones = placesPersones;

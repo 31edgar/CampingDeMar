@@ -7,7 +7,7 @@ public class Parcela extends Allotjament {
 
     //Constructor comú
     public Parcela(String nom_, String idAllotjament, float metres, boolean connexioElectrica){
-        super(nom_, idAllotjament);
+        super(nom_, idAllotjament, 4, 2);
         this.metres = metres;
         this.connexioElectrica = connexioElectrica;
     }

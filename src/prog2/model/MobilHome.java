@@ -14,7 +14,7 @@ public class MobilHome extends Allotjament {
     //Constructor
     public MobilHome(String nom_, String idAllotjament_, String mida, int habitacions, int placesPersones,
                      boolean terrasaBarbacoa) {
-        super(nom_, idAllotjament_);
+        super(nom_, idAllotjament_, 5, 3);
         this.mida = mida;
         this.habitacions = habitacions;
         this.placesPersones = placesPersones;

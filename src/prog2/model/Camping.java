@@ -12,6 +12,11 @@ public class Camping implements InCamping {
     ArrayList<Client> llistaClients = new ArrayList<>();
     LlistaReserves llistaReserves = new LlistaReserves(); // CAL IMPLEMENTAR LA CLASSE LlistaReserves
 
+    // Constructor
+    public Camping(String nom) {
+        this.nom = nom;
+    }
+
     // Mètodes
     // - Getters
     public String getNom() {

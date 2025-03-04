@@ -15,7 +15,7 @@ public class BungalowPremium extends Allotjament {
     //Constructor
     public BungalowPremium(String nom_, String idAllotjament_, String mida, int habitacions, int placesPersones, int placesParquing, boolean terrassa, boolean tv, boolean aireFred,
                            boolean serveisExtra, String codiWifi) {
-        super(nom_, idAllotjament_);
+        super(nom_, idAllotjament_, 7, 4);
         this.mida = mida;
         this.habitacions = habitacions;
         this.placesPersones = placesPersones;

@@ -15,7 +15,7 @@ public class Glamping extends Allotjament {
     //Constructor
     public Glamping(String nom_, String idAllotjament_, String mida, int habitacions, int placesPersones,
                     String material, boolean casaMascota) {
-        super(nom_, idAllotjament_);
+        super(nom_, idAllotjament_, 5, 3);
         this.mida = mida;
         this.habitacions = habitacions;
         this.placesPersones = placesPersones;
