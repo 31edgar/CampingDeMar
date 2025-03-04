@@ -67,7 +67,7 @@ public class ReservaTest {
         LocalDate novaDataEntrada = LocalDate.of(2024, 6, 1);
         LocalDate novaDataSortida = LocalDate.of(2024, 6, 5);
 
-        reserva.setAllostjament_(nouAllotjament);
+        reserva.setAllotjament_(nouAllotjament);
         reserva.setSoci(nouClient);
         reserva.setDataEntrada(novaDataEntrada);
         reserva.setDataSortida(novaDataSortida);
