@@ -29,19 +29,20 @@ public class GestorCamping {
         // Calcular la mida total de les parcel·les (en M^2) del Càmping i mostrar un missatge de la següent manera:
         // >> La mida total de les parcel·les del Càmping del Mar és de X m^2)
         //--------------------------------------------------------------------------------------------------------------------
-        // Per completar
+        System.out.println("La mida total de les parcel·les del Càmping del Mar és de " + campingMar.calculMidaTotalParceles() + "m²");
+
 
 
         // Mostrar el número total d'allotjaments del Càmping i el número d'allotjaments que estan operatius amb el següent missatge:
         // >> El número total d'allotjaments del Càmping és X dels quals X allotjaments estan operatius.
         //--------------------------------------------------------------------------------------------------
-        // Per completar
+        System.out.println("El número total d'allotaments del Càmping és de "+
+                campingMar.getNumAllotjaments() + " dels quals " + campingMar.calculAllotjamentsOperatius() + " allotjaments estan operatius");
 
         // Mostrar l'allotjament amb estada mínima de la temporada baixa més curta amb el següent missatge:
         // >> L'allotjament amb estada mínima de la temporada baixa més curta és el següent:
         //--------------------------------------------------------------------------------------------------
-        // Per completar
-       
+        System.out.println("L'allotjament amb estada mínima de la temporada baixa més curta és el següent: " + campingMar.getAllotjamentEstadaMesCurta());
     }
     
     /**
@@ -49,8 +50,6 @@ public class GestorCamping {
      * @param camping L'objecte de tipus Camping que anem a omplir
      */
     private static void omplirDadesModel(Camping camping){
-        
-        
         // Afegir parcel·les:
         //------------------------------
         String nom = "Parcel·la Nord";
@@ -65,7 +64,7 @@ public class GestorCamping {
         
         camping.afegirParcela(nom, idAllotjament, metres, connexioElectrica);
 
-
+        //ELS WARNINGS SÓN PQ ESTEM DEFININT LA CLASSE SENCERA ALTRE COP. ÉS NORMAL.
         // Afegir bungalows:
         //------------------------------
         nom = "Bungalow Est";
@@ -83,7 +82,7 @@ public class GestorCamping {
         nom = "Bungalow Oest";
         idAllotjament = "103B";
         mida = "Mitjana";
-        habitacions =2;
+        habitacions = 2;
         placesPersones = 4;
         placesParquing = 1;
         terrassa = true;
@@ -187,7 +186,7 @@ public class GestorCamping {
     
     /**
      * Mètode per fer reserves d'allotjaments.
-     * @param camping
+     * @param camping objecte de tipus Caming al que afagirem la reserva.
      */
     private static void ferReserves(Camping camping){
         

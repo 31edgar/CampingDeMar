@@ -39,10 +39,7 @@ public class Camping implements InCamping {
         return llistaAllotjaments.size();
     }
 
-    public int getNumReserves() {
-        // CAL IMPLEMENTAR LA CLASSE LlistaReserves
-        return 0;
-    }
+    public int getNumReserves() {return llistaReserves.getNumReserves();}
 
     public int getNumClients() {
         return llistaClients.size();
@@ -89,7 +86,7 @@ public class Camping implements InCamping {
         llistaReserves.afegirReserva(allotjament, client, dataEntrada, dataSortida);
     }
 
-    public float calculaMidaTotalParceles() {
+    public float calculMidaTotalParceles() {
         float midaTotal = 0;
 
         for (Allotjament allotjament : llistaAllotjaments) {
