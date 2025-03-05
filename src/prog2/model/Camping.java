@@ -89,9 +89,10 @@ public class Camping implements InCamping {
         llistaReserves.afegirReserva(allotjament, client, dataEntrada, dataSortida);
     }
 
-    public float calculaMidaTotalParceles() {
+    public float calculMidaTotalParceles() {
         float midaTotal = 0;
 
+        // Iterem per tota la llista d'allotjaments i per a totes les parceles, sumem la seva mida al total
         for (Allotjament allotjament : llistaAllotjaments) {
             if (allotjament instanceof Parcela) {
                 Parcela parcela = (Parcela) allotjament; // Fem un cast al tipus parcela, per poder utilitzar el seu metode getMida()
@@ -105,13 +106,60 @@ public class Camping implements InCamping {
     public int calculAllotjamentsOperatius() {
         int allotjamentsOperatius = 0;
 
+        // Mirem el correcte funcionament per a cada tipus d'allotjament
         for (Allotjament allotjament : llistaAllotjaments) {
+            if (allotjament instanceof Parcela) {
+                Parcela parcela = (Parcela) allotjament;
+                if (parcela.correcteFuncionament()) {
+                    allotjamentsOperatius++;
+                }
+            }
 
+            if (allotjament instanceof Bungalow) {
+                Bungalow bungalow = (Bungalow) allotjament;
+                if (bungalow.correcteFuncionament()) {
+                    allotjamentsOperatius++;
+                }
+            }
+
+            if (allotjament instanceof BungalowPremium) {
+                BungalowPremium bungalowPremium = (BungalowPremium) allotjament;
+                if (bungalowPremium.correcteFuncionament()) {
+                    allotjamentsOperatius++;
+                }
+            }
+
+            if (allotjament instanceof Glamping) {
+                Glamping glamping = (Glamping) allotjament;
+                if (glamping.correcteFuncionament()) {
+                    allotjamentsOperatius++;
+                }
+            }
+
+            if (allotjament instanceof MobilHome) {
+                MobilHome mobilHome = (MobilHome) allotjament;
+                if (mobilHome.correcteFuncionament()) {
+                    allotjamentsOperatius++;
+                }
+            }
         }
+
+        return allotjamentsOperatius;
     }
 
     public Allotjament getAllotjamentEstadaMesCurta() {
-        // Falta implementar
+        long estadaMesCurta = 1000000;
+        Allotjament allotjamentEstadaMesCurta = null;
+
+        for (Allotjament allotjament : llistaAllotjaments) {
+            long estada = allotjament.getEstadaMinima(InAllotjament.Temp.BAIXA);
+            if (estada < estadaMesCurta) {
+                estadaMesCurta = estada;
+                allotjamentEstadaMesCurta = allotjament;
+            }
+        }
+
+        return allotjamentEstadaMesCurta;
     }
 
     public Client buscarClient(String dni_) throws ExcepcioReserva {
@@ -136,6 +184,13 @@ public class Camping implements InCamping {
         return null;
     }
 
+    public static prog2.model.InAllotjament.Temp getTemporada(LocalDate dataEntrada) {
+        LocalDate _20marc = LocalDate.of(2025, 3, 20);
+        LocalDate _21setembre = LocalDate.of(2025, 9, 21);
+        InAllotjament.Temp temp = (dataEntrada.isAfter(_20marc) && dataEntrada.isBefore(_21setembre)) ? InAllotjament.Temp.ALTA : InAllotjament.Temp.BAIXA;
+
+        return temp;
+    }
 
 
 }

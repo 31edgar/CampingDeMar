@@ -27,7 +27,7 @@ public class Client {
         if (dni_.length() == 9) {
             this.dni_ = dni_;
         } else {
-            throw new ExcepcioReserva("El DNI ha de tenir 9 caràcters"); //UNHANDLED
+            throw new ExcepcioReserva("El DNI ha de tenir 9 caràcters."); //UNHANDLED
         }
     }
 

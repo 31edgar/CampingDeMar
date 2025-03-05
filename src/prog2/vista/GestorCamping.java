@@ -29,19 +29,19 @@ public class GestorCamping {
         // Calcular la mida total de les parcel·les (en M^2) del Càmping i mostrar un missatge de la següent manera:
         // >> La mida total de les parcel·les del Càmping del Mar és de X m^2)
         //--------------------------------------------------------------------------------------------------------------------
-        // Per completar
+        System.out.println("La mida total de les parcel·les del Càmping del Mar és de " + campingMar.calculMidaTotalParceles() + "m^2");
 
 
         // Mostrar el número total d'allotjaments del Càmping i el número d'allotjaments que estan operatius amb el següent missatge:
         // >> El número total d'allotjaments del Càmping és X dels quals X allotjaments estan operatius.
         //--------------------------------------------------------------------------------------------------
-        // Per completar
+        System.out.println("El número total d'allotjaments del Càmping és " + campingMar.getNumAllotjaments() + " dels quals "
+                + campingMar.calculAllotjamentsOperatius() + " allotjaments estan operatius");
 
         // Mostrar l'allotjament amb estada mínima de la temporada baixa més curta amb el següent missatge:
         // >> L'allotjament amb estada mínima de la temporada baixa més curta és el següent:
         //--------------------------------------------------------------------------------------------------
-        // Per completar
-       
+        System.out.println("L'allotjament amb estada mínima de la temporada baixa més curta és el següent: " + campingMar.getAllotjamentEstadaMesCurta());
     }
     
     /**
