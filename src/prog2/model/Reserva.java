@@ -18,7 +18,7 @@ public class Reserva {
         InAllotjament.Temp temp = (dataEntrada.isAfter(_20marc) && dataEntrada.isBefore(_21setembre)) ? InAllotjament.Temp.ALTA : InAllotjament.Temp.BAIXA;
 
         if (ChronoUnit.DAYS.between(dataEntrada, dataSortida) < allotjament.getEstadaMinima(temp)) {
-            throw new ExcepcioReserva("Estada mínima no complida");
+            throw new ExcepcioReserva("no compleixen l'estada mínima");
         }
 
         this.allotjament = allotjament;

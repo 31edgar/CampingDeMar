@@ -9,6 +9,10 @@ public class LlistaReserves implements InLlistaReserves {
     //Atribut llistaReserves
     private ArrayList<Reserva> reserves;
 
+    public LlistaReserves() {
+        this.reserves = new ArrayList<>();
+    }
+
     public void afegirReserva(Allotjament allotjament, Client client, LocalDate dataEntrada, LocalDate dataSortida) throws ExcepcioReserva {
         //Comprovacions
         if(allotjamentDisponible(allotjament,client,dataEntrada,dataSortida) && isEstadaMinima(allotjament,client,dataEntrada,dataSortida)){
@@ -34,6 +38,8 @@ public class LlistaReserves implements InLlistaReserves {
                 }
             }
         }
+
+
         return true;
     }
 
@@ -44,8 +50,7 @@ public class LlistaReserves implements InLlistaReserves {
         InAllotjament.Temp temp = (dataEntrada.isAfter(_20marc) && dataEntrada.isBefore(_21setembre)) ? InAllotjament.Temp.ALTA : InAllotjament.Temp.BAIXA;
 
         if (ChronoUnit.DAYS.between(dataEntrada, dataSortida) < allotjament.getEstadaMinima(temp)) {
-            throw new ExcepcioReserva("Les dates sol·licitades pel client "+client+" amb DNI: "+client.getDni()+" " +
-                    "no compleixen l'estada mínima per l'allotjament amb identificador "+allotjament.getId()+".");
+            throw new ExcepcioReserva("no compleixen l'estada mínima");
         }
         return true;
     }

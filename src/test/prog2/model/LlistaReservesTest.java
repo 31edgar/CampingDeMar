@@ -87,8 +87,8 @@ public class LlistaReservesTest {
         Allotjament allotjamentAmbEstadaMinima = new Parcela("Parcela A", "P001", 50.0f, true);
         allotjamentAmbEstadaMinima.setEstadaMinima(7, 0);  // Estada mínima de 7 dies en temporada alta i de 0 dies en temporada baixa.
 
-        LocalDate dataEntradaCurta = LocalDate.of(2024, 7, 1);
-        LocalDate dataSortidaCurta = LocalDate.of(2024, 7, 5);  // Estada de 4 dies, hauria de fallar
+        LocalDate dataEntradaCurta = LocalDate.of(2025, 7, 1);
+        LocalDate dataSortidaCurta = LocalDate.of(2025, 7, 5);  // Estada de 4 dies, hauria de fallar
 
         try {
             llistaReserves.afegirReserva(allotjamentAmbEstadaMinima, client, dataEntradaCurta, dataSortidaCurta);
@@ -98,7 +98,7 @@ public class LlistaReservesTest {
         }
 
         // Test de l'estada mínima vàlida
-        LocalDate dataSortidaLonga = LocalDate.of(2024, 7, 8);  // Estada de 7 dies, hauria de passar
+        LocalDate dataSortidaLonga = LocalDate.of(2025, 7, 8);  // Estada de 7 dies, hauria de passar
         try {
             llistaReserves.afegirReserva(allotjamentAmbEstadaMinima, client, dataEntradaCurta, dataSortidaLonga);
         } catch (ExcepcioReserva e) {

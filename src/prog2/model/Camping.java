@@ -10,7 +10,7 @@ public class Camping implements InCamping {
     private String nom_;
     private ArrayList<Allotjament> llistaAllotjaments = new ArrayList<>();
     private ArrayList<Client> llistaClients = new ArrayList<>();
-    private LlistaReserves llistaReserves = new LlistaReserves(); // CAL IMPLEMENTAR LA CLASSE LlistaReserves
+    private LlistaReserves llistaReserves = new LlistaReserves();
 
     // Constructor
     public Camping(String nom_) {
