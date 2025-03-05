@@ -7,7 +7,7 @@ public class Client {
     private String nom_, dni_;
 
     // Constructor
-    public Client(String nom_, String dni_) {
+    public Client(String nom_, String dni_) throws ExcepcioReserva {
         this.nom_ = nom_;
         setDni(dni_);
     }
@@ -23,7 +23,7 @@ public class Client {
         this.nom_ = nom_;
     }
 
-    public void setDni(String dni_) {
+    public void setDni(String dni_) throws ExcepcioReserva{
         if (dni_.length() == 9) {
             this.dni_ = dni_;
         } else {

@@ -3,6 +3,7 @@ import prog2.vista.ExcepcioReserva;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Camping implements InCamping {
     // Atributs
@@ -82,19 +83,57 @@ public class Camping implements InCamping {
     }
 
     public void afegirReserva(String id_, String dni_, LocalDate dataEntrada, LocalDate dataSortida) throws ExcepcioReserva {
-        // Falta implementar
+        // Busquem si el client existeix i si l'allotjament existeix
+        Client client = buscarClient(dni_);
+        Allotjament allotjament = buscarAllotjament(id_);
+        llistaReserves.afegirReserva(allotjament, client, dataEntrada, dataSortida);
     }
 
     public float calculaMidaTotalParceles() {
-        // Falta implementar
+        float midaTotal = 0;
+
+        for (Allotjament allotjament : llistaAllotjaments) {
+            if (allotjament instanceof Parcela) {
+                Parcela parcela = (Parcela) allotjament; // Fem un cast al tipus parcela, per poder utilitzar el seu metode getMida()
+                midaTotal += parcela.getMida();
+            }
+        }
+
+        return midaTotal;
     }
 
     public int calculAllotjamentsOperatius() {
-        // Falta implementar
+        int allotjamentsOperatius = 0;
+
+        for (Allotjament allotjament : llistaAllotjaments) {
+
+        }
     }
 
     public Allotjament getAllotjamentEstadaMesCurta() {
         // Falta implementar
+    }
+
+    public Client buscarClient(String dni_) throws ExcepcioReserva {
+        for (Client client : llistaClients) {
+            if (client.getDni().equals(dni_)) {
+                return client;
+            } else {
+                throw new ExcepcioReserva("afegirReserva: buscarClient: dni " + dni_ + " no existeix a la llista de clients");
+            }
+        }
+        return null;
+    }
+
+    public Allotjament buscarAllotjament(String id_) throws ExcepcioReserva{
+        for (Allotjament allotjament : llistaAllotjaments) {
+            if (allotjament.getId().equals(id_)) {
+                return allotjament;
+            } else {
+                throw new ExcepcioReserva(("afegirReserva: buscarAllotjament: id " + id_ + " no existeix a la llista d'allotjaments"));
+            }
+        }
+        return null;
     }
 
 
