@@ -39,10 +39,7 @@ public class Camping implements InCamping {
         return llistaAllotjaments.size();
     }
 
-    public int getNumReserves() {
-        // CAL IMPLEMENTAR LA CLASSE LlistaReserves
-        return 0;
-    }
+    public int getNumReserves() {return llistaReserves.getNumReserves();}
 
     public int getNumClients() {
         return llistaClients.size();
